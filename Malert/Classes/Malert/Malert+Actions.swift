@@ -17,9 +17,10 @@ extension Malert {
             if !isPointInMalertView {
                 dismiss(animated: true, completion: self.completionBlock)
             }
-        } else {
-            self.view.endEditing(true)
         }
+//        else {
+//            self.view.endEditing(true)
+//        }
     }
 }
 
