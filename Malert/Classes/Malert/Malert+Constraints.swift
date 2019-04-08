@@ -23,13 +23,13 @@ extension Malert {
         visibleView.layoutIfNeeded()
         
         NSLayoutConstraint.deactivate(malertConstraints)
-        let constraintY:NSLayoutConstraint = keyboardRect.size.height > 0 ? malertView.bottomAnchor.constraint(equalTo: visibleView.bottomAnchor, constant: bottom) :malertView.centerYAnchor.constraint(equalTo: visibleView.centerYAnchor)
+        let constraintY:NSLayoutConstraint = keyboardRect.size.height > 0 ? malertView.bottomAnchor.constraint(equalTo: visibleView.bottomAnchor, constant: bottomMargin) :malertView.centerYAnchor.constraint(equalTo: visibleView.centerYAnchor)
         
         malertConstraints = [
             malertView.centerXAnchor.constraint(equalTo: visibleView.centerXAnchor),
             constraintY,
-            malertView.trailingAnchor.constraint(equalTo: visibleView.trailingAnchor, constant: trailing),
-            malertView.leadingAnchor.constraint(equalTo: visibleView.leadingAnchor, constant: leading)
+            malertView.trailingAnchor.constraint(equalTo: visibleView.trailingAnchor, constant: rightMargin),
+            malertView.leadingAnchor.constraint(equalTo: visibleView.leadingAnchor, constant: leftMargin)
         ]
         
         if UIDevice.current.orientation.isLandscape {
