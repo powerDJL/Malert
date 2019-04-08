@@ -124,7 +124,13 @@ extension Malert {
         get { return malertView.backgroundColor }
         set { malertView.backgroundColor = newValue }
     }
-    
+    /* to screen left margin */
+    public var leading: CGFloat = 16
+     /* to screen right margin */
+    public var trailing: CGFloat = -16
+    /* when keyboard show, alert to view bottom margin */
+    public var bottom: CGFloat = 30
+
     /* Title config */
     public var textColor: UIColor {
         get { return malertView.textColor }
