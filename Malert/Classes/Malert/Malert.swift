@@ -22,6 +22,13 @@ public class Malert: BaseMalertViewController {
     let dismissOnActionTapped: Bool
     var completionBlock: (() -> Void)?
     
+    /* to screen left margin */
+    public lazy var leading: CGFloat = 16
+    /* to screen right margin */
+    public lazy var trailing: CGFloat = -16
+    /* when keyboard show, alert to view bottom margin */
+    public lazy var bottom: CGFloat = -30
+    
     lazy var visibleView: UIView = {
         let visibleView = UIView()
         visibleView.translatesAutoresizingMaskIntoConstraints = false
@@ -124,12 +131,6 @@ extension Malert {
         get { return malertView.backgroundColor }
         set { malertView.backgroundColor = newValue }
     }
-    /* to screen left margin */
-    public var leading: CGFloat = 16
-     /* to screen right margin */
-    public var trailing: CGFloat = -16
-    /* when keyboard show, alert to view bottom margin */
-    public var bottom: CGFloat = 30
 
     /* Title config */
     public var textColor: UIColor {
