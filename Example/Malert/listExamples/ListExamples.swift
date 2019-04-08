@@ -67,6 +67,8 @@ extension ListExamplesViewController {
         alert.buttonsSideMargin = 60
         alert.buttonsBottomMargin = 16
         alert.separetorColor = .clear
+        alert.leftMargin = 40
+        alert.rightMargin = -40
         
         let firstAction = MalertAction(title: "Take the tour")
         firstAction.backgroundColor = UIColor(red:0.38, green:0.76, blue:0.15, alpha:1.0)
@@ -160,6 +162,9 @@ extension ListExamplesViewController {
         alert.textColor = .gray
         alert.titleFont = UIFont.systemFont(ofSize: 20)
         alert.margin = 16
+        alert.leftMargin = 0
+        alert.rightMargin = -40
+        alert.bottomMargin = -40
         alert.buttonsAxis = .horizontal
         alert.separetorColor = .clear
         
@@ -182,6 +187,8 @@ extension ListExamplesViewController {
         alert.animationType = .modalRight
         alert.backgroundColor = UIColor(red:0.36, green:0.86, blue:0.84, alpha:1.0)
         alert.cornerRadius = 20
+        alert.leftMargin = 60
+        alert.rightMargin = -60
         
         examples.append(Example(title: "Example 8", malert: alert))
     }
